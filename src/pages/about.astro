@@ -1,5 +1,7 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import "../styles/global.css";
+import Footer from '../components/Footer.astro';
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -25,7 +27,6 @@ const goal = 3;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Navigation/>
 
     <h1>{pageTitle}</h1>
     <h2>In this web site we will talk about my self</h2>
@@ -50,5 +51,6 @@ const goal = 3;
     {finished && <p>I finished this tutorial!</p>}
 
     {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    <Footer/>
   </body>
 </html>

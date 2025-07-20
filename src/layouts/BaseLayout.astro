@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+import Navigation from '../components/Navigation.astro';
+import Card from '../components/Card.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+  </head>
+  <body style="font-family: 'Gravitica Mono';" class="bg-black">
+    <div class="masonry m-2">
+      <Card class="masonry-item" deg="130" title="Javier Barcelo Santos" subtitle="Software Developer Jr" text="I naturally take on leadership responsibilities when necessary, always prioritizing the best decisions for the team."/>
+      <Card class="masonry-item" deg="49" img="/pfp.jpg" />
+      <Card class="masonry-item" deg="145" img="/Copy of Reconocimiento_SoftwareTalks_page-0001.jpg" />
+    </div>
+    <Navigation/>
+  </body>
+</html>
