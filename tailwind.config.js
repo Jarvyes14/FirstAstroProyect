@@ -4,7 +4,11 @@ export default {
     "./src/**/*.{astro,js,jsx,ts,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '360px',
+      },
+    },
   },
   plugins: [],
 }
