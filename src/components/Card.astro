@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 const { deg, img, title, subtitle, text, link } = Astro.props;
 const gradient = `linear-gradient(${deg}deg, black 30%, white 50%, black 70%)`;
 
@@ -17,7 +18,7 @@ const showText = img ? 'none'  : 'block';
       class="h-auto rounded w-full object-cover"
       style={`display:${showImg}`}
     />
-    
+
     <div style={`display:${showText}`}>
       <h1 class="m-4 sm:text-6xl md:text-5xl xl:text-6xl 2xl:text-7xl text-7xl font-bold text-white">
         {title}
