@@ -1,34 +1,14 @@
 ---
 import "../styles/global.css";
-const { deg, img, title, subtitle, text, link } = Astro.props;
-const gradient = `linear-gradient(${deg}deg, black 30%, white 50%, black 70%)`;
+import CardModal from "./CardModal.jsx";
 
-const showImg  = img ? 'block' : 'none';
-const showText = img ? 'none'  : 'block';
+const { deg, img, title, subtitle, text } = Astro.props;
+const gradient = `linear-gradient(${deg}deg, black 30%, white 50%, black 70%)`;
 ---
 
 <div
   class="mb-4 break-inside-avoid p-[2px] rounded-xl"
   style={`background-image: ${gradient};`}
 >
-  <div class="bg-gray-900 rounded-xl text-white h-auto overflow-hidden">
-    <img
-      src={img || ''}
-      alt="Card Image"
-      class="h-auto rounded w-full object-cover"
-      style={`display:${showImg}`}
-    />
-
-    <div style={`display:${showText}`}>
-      <h1 class="m-4 xs:m-2 xs:text-3xl sm:text-6xl md:text-5xl xl:text-6xl 2xl:text-7xl text-7xl font-bold text-white">
-        {title}
-      </h1>
-      <p class="m-4 xs:m-2 xs:text-sm sm:text-3xl md:text-2xl xl:text-3xl 2xl:text-4xl text-gray-500">
-        {subtitle}
-      </p>
-      <p class="m-4 xs:m-2 xs:text-xs sm:text-xl md:text-base xl:text-lg 2xl:text-xl">
-        {text}
-      </p>
-    </div>
-  </div>
+  <CardModal client:load img={img} title={title} subtitle={subtitle} text={text} />
 </div>
