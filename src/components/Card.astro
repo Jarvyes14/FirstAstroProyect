@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import CardModal from "./CardModal.jsx";
 
-const { deg, img, title, subtitle, text, zoom = true } = Astro.props;
+const { deg, img, title, subtitle, text, github, tech, zoom = true } = Astro.props;
 const gradient = `linear-gradient(${deg}deg, black 30%, white 50%, black 70%)`;
 ---
 
@@ -10,5 +10,5 @@ const gradient = `linear-gradient(${deg}deg, black 30%, white 50%, black 70%)`;
   class="mb-4 break-inside-avoid p-[2px] rounded-xl"
   style={`background-image: ${gradient};`}
 >
-  <CardModal client:load img={img} title={title} subtitle={subtitle} text={text} zoom={zoom}/>
+  <CardModal client:load img={img} title={title} subtitle={subtitle} text={text} zoom={zoom} github={github} tech={tech}/>
 </div>
