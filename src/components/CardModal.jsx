@@ -13,7 +13,9 @@ import {
   SiDocker,
   SiSolidity,
   SiSpringboot,
-  SiPostgresql
+  SiPostgresql,
+  SiNextdotjs,
+  SiTypescript
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -42,7 +44,9 @@ export default function CardModal({ img, title, subtitle, text, zoom, github, te
         solidity: <SiSolidity className="text-gray-600" title="Solidity" />,
         java: <FaJava className="text-red-600" title="Java" />,
         springboot: <SiSpringboot className="text-green-600" title="Spring Boot" />,
-        postgre: <SiPostgresql className="text-blue-400" title="PostgreSQL" />
+        postgre: <SiPostgresql className="text-blue-400" title="PostgreSQL" />,
+        nextjs: <SiNextdotjs className="text-white" title="Next.js" />,
+        typescript: <SiTypescript className="text-blue-400" title="TypeScript" />
     };
 
     const content = (
