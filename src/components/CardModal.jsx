@@ -59,29 +59,29 @@ export default function CardModal({ img, title, subtitle, text, zoom, github, te
             />
         )}
         {type === "github" && (
-            <div className="p-4 flex flex-col gap-2">
+            <div className="p-3 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                    <h1 className="text-2xl font-bold">{title}</h1>
+                    <h1 className="xs:text-lg sm:text-3xl md:text-2xl xl:text-3xl 2xl:text-4xl font-bold">{title}</h1>
                     <a href={github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-6 h-6 text-white hover:text-gray-300" />
+                        <Github className="w-6 h-6 text-white hover:text-gray-300 xs:text-sm sm:text-3xl md:text-2xl xl:text-3xl 2xl:text-4xl" />
                     </a>
                 </div>
                 {tech && tech.length > 0 && (
-                    <div className="flex gap-3 m-2">
+                    <div className="flex flex-wrap m-2 xs:gap-1 xs:m-0 sm:gap-5 xl:gap-3 xl:m-3">
                         {tech.map((key, i) => (
-                        <div key={i} className="text-3xl">
+                        <div key={i} className="xs:text-sm sm:text-3xl md:text-2xl xl:text-3xl 2xl:text-4xl">
                             {iconMap[key.toLowerCase()]}
                         </div>
                         ))}
                     </div>
                 )}
-                <p className="text-gray-400 text-base">{subtitle}</p>
-                <p className="text-sm">{text}</p>
+                <p className="text-gray-500 xs:text-sm sm:text-3xl md:text-2xl xl:text-3xl 2xl:text-4xl">{subtitle}</p>
+                <p className="xs:text-xs sm:text-xl md:text-base xl:text-lg 2xl:text-xl">{text}</p>
                 <a
                     href={github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 inline-block text-center bg-white text-black font-semibold py-2 px-4 rounded hover:bg-gray-300"
+                    className="mt-1 inline-block text-center bg-white text-black font-semibold py-2 px-4 rounded hover:bg-gray-300 xs:text-xs sm:text-xl md:text-base xl:text-lg 2xl:text-xl"
                 >
                     Ver en GitHub
                 </a>
